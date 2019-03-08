@@ -11,16 +11,16 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.zeroBlue();
-    beach.explore();
+    Picture pancake = new Picture("pancake.jpg");
+    pancake.explore();
+    pancake.zeroBlue();
+    pancake.explore();
   }
   public static void testKeepOnlyBlue(){
-      Picture beach = new Picture ("beach.jpg");
-      beach.explore();
-      beach.keepOnlyBlue();
-      beach.explore();
+      Picture pancake = new Picture ("pancake.jpg");
+      pancake.explore();
+      pancake.keepOnlyBlue();
+      pancake.explore();
     }
   
   /** Method to test mirrorVertical */
