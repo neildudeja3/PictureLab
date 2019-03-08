@@ -112,9 +112,9 @@ public class IntArrayWorker
                 return count++;
             }
             
-            public int getLargest(int n)
+            public int getLargest()
             {
-                int largest = 0;
+                int largest = matrix[0][0];
                 for (int[] row: matrix)
                 {
                     for (int pixel : row)
