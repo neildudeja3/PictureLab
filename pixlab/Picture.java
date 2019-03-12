@@ -143,10 +143,12 @@ public class Picture extends SimplePicture
     public void negate()
     {
         Pixel[][] p = this.getPixels2D();
-        for (Pixel[] row : pixels)
-            for (Pixel p : row)
+        for (Pixel[] row : p)
+            for (Pixel pixels : row)
             {
-                p.setGreen(255-(p.getGreen()));
+                pixels.setGreen(255-(pixels.getGreen()));
+            }
+        }
                 
   
   /** Method that mirrors the picture around a 
@@ -185,6 +187,36 @@ public class Picture extends SimplePicture
       }
     } 
   }
+  
+    public void mirrorDiagonal()
+    {
+        
+        {
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel topRightPixel = null;
+      Pixel bottomLeftPixel = null;
+      int maxLength;
+      if (pixels.length < pixels[0].length) { maxLength = pixels.length; }
+      else {maxLength = pixels[0].length; }
+      
+      for (int row = 0; row < maxLength; row++)
+      {
+          for (int col = row; col < maxLength; col++)
+          {
+              topRightPixel = pixels[row][col];
+              bottomLeftPixel = pixels[col][row];
+              bottomLeftPixel.setColor(topRightPixel.getColor());
+          }
+      }
+  }
+
+        
+        
+    }
+        
+  
+  
+  
   
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()

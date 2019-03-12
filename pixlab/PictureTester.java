@@ -40,6 +40,16 @@ public class PictureTester
     caterpillar.explore();
   }
   
+  public static void testMirrorDiagonal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorDiagonal();
+    caterpillar.explore();
+}
+  
+  
+  
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -84,7 +94,7 @@ public class PictureTester
     testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
-    //testMirrorDiagonal();
+    testMirrorDiagonal();
     testCollage();
     //testCopy();
     //testEdgeDetection();
