@@ -212,7 +212,7 @@ public class Picture extends SimplePicture
 
         
         
-    }
+ }
         
   
   
@@ -317,12 +317,13 @@ public class Picture extends SimplePicture
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
-    Picture flower1 = new Picture("flower1.jpg");
-    Picture flower2 = new Picture("flower2.jpg");
+    Picture flower1 = new Picture("robot.jpg");
+    Picture flower2 = new Picture("pancake.jpg");
     this.copy(flower1,0,10);
     this.copy(flower2,100,20);
     this.copy(flower1,200,30);
     Picture flowerNoBlue = new Picture(flower2);
+    Picture flowerMirrorTemple = new Picture(flower1);
     flowerNoBlue.zeroBlue();
     this.copy(flowerNoBlue,300,40);
     this.copy(flower1,400,50);
